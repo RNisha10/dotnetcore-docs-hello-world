@@ -11,6 +11,6 @@ public class IndexModel : PageModel
     public string UserClaims { get; set; }
     public void OnGet()
     {
-	    UserClaims = HttpContext.User.FindFirstValue("preferred_username");
+	    UserClaims = HttpContext.User.Claims.First(c => c.Type == "preferred_username");
     }
 }
