@@ -11,6 +11,6 @@ public class IndexModel : PageModel
     public IEnumerable<Claim> UserClaims { get; set; }
     public void OnGet()
     {
-	    UserClaims = HttpContext.User.Claims.First;
+	    UserClaims = HttpContext.User.Claims.First();
     }
 }
