@@ -6,8 +6,13 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Runtime.InteropServices;
 
-public static class ClaimsPrincipalParser : PageModel
+namespace dotnetcoresample.Pages;
+
+public class ClaimsPrincipalParser : PageModel
 {
     private class ClientPrincipalClaim
     {
