@@ -8,9 +8,9 @@ namespace dotnetcoresample.Pages;
 public class IndexModel : PageModel
 {
 
-    public string UserClaims { get; set; }
+    public <claim> UserClaims { get; set; }
     public void OnGet()
     {
-	    UserClaims = (HttpContext.User.Claims.First(c => c.Type == "preferred_username")).toString();
+	    UserClaims = HttpContext.User.Claims.First
     }
 }
