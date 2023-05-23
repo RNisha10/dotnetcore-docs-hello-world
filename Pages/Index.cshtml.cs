@@ -32,7 +32,7 @@ public class IndexModel : PageModel
         [JsonPropertyName("role_typ")]
         public string RoleClaimType { get; set; }
         [JsonPropertyName("claims")]
-        public IEnumerable<ClientPrincipalClaim> Claims { get; }
+        public IEnumerable<ClientPrincipalClaim> Claims { get; set; }
     }
 
     public string OSVersion { get { return RuntimeInformation.OSDescription; }  }
