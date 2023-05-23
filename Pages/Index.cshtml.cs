@@ -14,16 +14,11 @@ namespace dotnetcoresample.Pages;
 
 public class IndexModel : PageModel
 {
-    public class ClientPrincipalClaim
-    {
-        [JsonPropertyName("typ")]
-        public string Type { get; set; }
-        [JsonPropertyName("val")]
-        public string Value { get; set; }
-    }
 
-    [JsonPropertyName("claims")]
-    public IEnumerable<ClientPrincipalClaim> Claims { get; set; }
+    [JsonPropertyName("typ")]
+    public string Type { get; set; }
+    [JsonPropertyName("val")]
+    public string Value { get; set; }
 
     public string OSVersion { get { return RuntimeInformation.OSDescription; }  }
     
