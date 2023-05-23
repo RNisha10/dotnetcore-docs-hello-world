@@ -14,7 +14,7 @@ namespace dotnetcoresample.Pages;
 
 public class IndexModel : PageModel
 {
-     private class ClientPrincipalClaim
+    public class ClientPrincipalClaim
     {
         [JsonPropertyName("typ")]
         public string Type { get; set; }
