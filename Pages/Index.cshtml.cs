@@ -9,9 +9,8 @@ public class IndexModel : PageModel
 {
 
     public IEnumerable<Claim> UserClaims { get; set; }
-    ClaimsPrincipal principal = HttpContext.Current.User as ClaimsPrincipal;
     public void OnGet()
     {
-	    principal = principal.claims;
+	    UserClaims = HttpContext.User.Claims;
     }
 }
