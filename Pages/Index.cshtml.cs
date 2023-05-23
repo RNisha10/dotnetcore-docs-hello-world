@@ -9,7 +9,7 @@ public class IndexModel : PageModel
 {
 
     public IEnumerable<Claim> UserClaims { get; set; }
-    public string UserName
+    public string UserName;
     public void OnGet()
     {
 	    UserClaims = HttpContext.User.Claims;
