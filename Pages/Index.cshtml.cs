@@ -18,7 +18,7 @@ public class IndexModel : PageModel
     [JsonPropertyName("typ")]
     public string Type { get; set; }
     [JsonPropertyName("val")]
-    public string Value { get { return Value; } }
+    public string Value { get; }
 
     public string OSVersion { get { return RuntimeInformation.OSDescription; }  }
     
